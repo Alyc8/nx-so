@@ -3,18 +3,18 @@ import Link from "next/link"
 function CarteleraCard({cartelera}) {
     return (
         
-        <Link className=" bg-white  border-red-700 border-4 mb-3 hover:bg-gray-200 hover:cursor-pointer"
+        <Link className="bg-black rounded-md  mb-3  hover:cursor-pointer border-4 border-zinc-700 p-4  hover:border-red-700  group "
             href={`/cartelera/${cartelera.pelicula_id}`}
         >
 
             {cartelera.image && (
-                <img src={cartelera.image} className="w-full h-72 object-cover  " alt=""/>
+                <img src={cartelera.image} className="w-full  sm:h-auto md:h-80 lg:h-96 object-cover " alt=""/>
             )}
 
-            <div className="py-2 px-3">
-                <h1 className="text-slate-800 text-lg font-bold">{cartelera.titulo}</h1>
-                <h2 className="text-sm font-semibold text-slate-700">{cartelera.director}</h2>
-                <h2 className="text-sm text-slate-700">{cartelera.duracion}</h2>
+            <div className="py-2 px-3 ">
+                <h1 className="text-white text-lg font-bold group-hover:text-red-700">{cartelera.titulo}</h1>
+                <h2 className="text-sm font-semibold text-white">{cartelera.director}</h2>
+                <h2 className="text-sm text-white">{cartelera.duracion}</h2>
             </div>
             
 

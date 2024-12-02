@@ -71,14 +71,14 @@ function CarteleraForm() {
 
     return (
         <div>
-            <form className="bg-white shadow-md rounded-md px-8 pt-6 pb-8 mb-4"
+            <form className="bg-zinc-900 shadow-md rounded-md px-8 pt-12 pb-12 mb-24 m-12"
                 onSubmit={handleSubmit}
                 ref={form}
             >
 
                 <label 
                     htmlFor="name"
-                    className="block text-gray-700 text-sm font-bold mb-2"
+                    className="block text-white text-sm font-bold mb-2"
                 >
                     Titulo
                 </label>
@@ -94,7 +94,7 @@ function CarteleraForm() {
 
                 <label 
                     htmlFor="name"
-                    className="block text-gray-700 text-sm font-bold mb-2"            
+                    className="block text-white text-sm font-bold mb-2 my-6"            
                 >Director
                 </label>
                 <input 
@@ -108,7 +108,7 @@ function CarteleraForm() {
 
                 <label 
                 htmlFor="name"
-                className="block text-gray-700 text-sm font-bold mb-2"              
+                className="block text-white text-sm font-bold mb-2 my-6"              
                 >Duracion</label>
                 <input 
                     name="duracion"
@@ -116,12 +116,12 @@ function CarteleraForm() {
                     placeholder="minutos" 
                     onChange={handleChange} 
                     value={cartelera.duracion}
-                    className="text-black shadow appearance-none border rounded w-full py-2 px-3"
+                    className="text-gray-500 shadow appearance-none border rounded w-full py-2 px-3"
                 />
 
                 <label
                     htmlFor="carteleraPoster"
-                    className="block text-gray-700 text-sm font-bold mb-2" 
+                    className="block text-white text-sm font-bold mb-2 my-6" 
                 >
                     Poster:
                 </label>
@@ -139,7 +139,7 @@ function CarteleraForm() {
                     />
                 )}
 
-                <button className="bg-red-600 hover:bg-red-500 text-black font-bold py-2 px-4 rounded m-2">
+                <button className="bg-red-800 hover:bg-red-700 text-black font-bold py-2 px-4 rounded mt-8">
                     {params.pelicula_id ? "Actualizar" : "Guardar"}
                 </button>
 

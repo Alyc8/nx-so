@@ -12,7 +12,7 @@ function CarteleraPage() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const {data} = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/cartelera`);
+                const { data } = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/cartelera`);
                 setCartelera(data);
             } catch (error) {
                 console.error("error fetch: ", error);
@@ -22,12 +22,14 @@ function CarteleraPage() {
     }, []);
 
 
-    return <div className=" grid gap-10 grid-cols-4 mx-24 my-12 ">
+    return <div className="grid gap-8 my-12 sm:mx-0 md:mx-0 lg:mx-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
         {cartelera.map(cartelera => (
-            <CarteleraCard cartelera={cartelera} key={cartelera.pelicula_id}/>
+            <CarteleraCard cartelera={cartelera} key={cartelera.pelicula_id} />
         ))}
 
-    </div>;
+
+    </div>
 }
 
 export default CarteleraPage;

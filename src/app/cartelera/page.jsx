@@ -10,10 +10,11 @@ async function CarteleraPage() {
     const cartelera = await loadCartelera();
     console.log(cartelera);
 
-    return <div className="grid gap-4 grid-cols-4">
+    return <div className=" grid gap-10 grid-cols-4 mx-24 my-12 ">
         {cartelera.map(cartelera => (
             <CarteleraCard cartelera={cartelera} key={cartelera.pelicula_id}/>
         ))}
+
     </div>;
 }
 

@@ -2,7 +2,7 @@ import axios from "axios"
 import Buttons from "./Buttons";
 
 async function loadCartelera(carteleraId) {
-    const { data } = await axios.get("http://localhost:3030/api/cartelera/" + carteleraId);
+    const { data } = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/cartelera/${carteleraId}`);
     return data;
 }
 

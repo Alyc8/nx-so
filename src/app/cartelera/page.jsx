@@ -2,7 +2,7 @@ import CarteleraCard from "@/components/CarteleraCard";
 import axios from "axios"
 
 async function loadCartelera() {
-    const {data} = await axios.get("http://localhost:3030/api/cartelera");
+    const {data} = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/cartelera`);
     return data;
 }
 
